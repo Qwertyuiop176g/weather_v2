@@ -28,7 +28,7 @@ def weatherdata(latitude, longitude, timezone):
 @lru_cache(maxsize=None)
 def getairquality(lat, long, aqi=True):
     Weatherapi = (f"http://api.weatherapi.com/v1/forecast.json"
-                   f"?key=e69f473e6b6841989ca121211240607"  
+                   f"?key="  
                    f"&q={lat},{long}"
                    f"&days=1"  
                    f"&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,air_quality"
@@ -128,7 +128,7 @@ def get_php_timezone(location):
 def main(location: str|None):
     if not location:
         location = input("Enter the location: ").strip()
-    opencage_api_key = "b2f23b4d6a6246f29ea8c59b6ec2e7b6"
+    opencage_api_key = ""
     include_air_quality = input("Do you want to include air quality data? (yes/no): ").strip().lower() == 'yes'
     try:
         t1 = datetime.now()
