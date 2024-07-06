@@ -12,7 +12,5 @@ weather quality api from https://www.weatherapi.com/ (free)
 # required imports
 ```
 import requests
-from datetime import datetime, timedelta
-from functools import lru_cache
 import pytz
 ```
